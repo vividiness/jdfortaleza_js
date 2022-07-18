@@ -1,0 +1,100 @@
+<script type="text/javascript">
+
+//1) Faça um Programa que peça dois números e imprima o maior deles
+n1 = 1*prompt("número um")
+n2 = 1*prompt("número dois")
+
+ if (n1 > n2) {
+     alert("O número " +n1 + " é o maior")
+ } else {
+     alert("O número " +n2+ " é o maior")
+ }
+
+ //2) Mostrar se o valor é negativo ou positivo
+
+ n=parseFloat(prompt("Digite um número"))
+
+ if (n==0) {
+    alert("Zero é considerado um número neutro.")
+ } else if(n>0){
+      alert("O número "+n+" é positivo")
+ }else {
+    alert("O número " +n+" é negativo")
+ }
+
+ 
+ //3)Faça um Programa que leia três números e mostre o maior deles. 
+
+ nu1=1*prompt("Digite um número: ")
+ nu2=1*prompt("Digite outro número")
+ nu3=1*prompt("Digite mais um:")
+
+ if(nu1>nu2 && nu1>nu3){
+    alert("O número "+nu1+" é o maior entre eles.")
+ }else if (nu2>nu1 && nu2>nu3){
+    alert("O número "+nu2+" é o maior entre eles.")
+ }else{
+    alert("O número "+nu3+" é o maior entre eles.")
+ } //onde usa o '?' e ':' operador ternário, dps pesquisa mais.
+
+ //4) Dizer sexo digitadndo f ou m ou invalido
+
+ sexo=prompt("Digite seu sexo \nM para masculino \nF para feminino")
+ 
+ if(sexo !="f" && sexo!= "F" && sexo!="m" && sexo!="M"){
+    alert("Digite um sexo válido 👾")
+ } else {
+ if (sexo == "f" || sexo=="F") {
+    alert("Sexo feminino.")   
+ } else{
+    alert("Sexo masculino.")
+ }
+}
+
+//5) digitar o turno
+
+turno = prompt("Em qual turno você estuda? Digite \nM para matutino \nV para vespertino \nN para noturno")
+ 
+ if (turno != "M" && turno != "m" && turno !="V" && turno != "v" && turno != "N" && turno != "n") {
+   alert("Digita um turno válido, amig@! 👾")
+ }else{
+    if (turno=="M" || turno=="m") {
+         alert("Bom dia!")   
+    } else if (turno=="V" || turno=="v") {
+         alert("Boa tarde!")
+    }else{
+         alert("Boa noite!")   
+ }
+}
+
+//a questão 6 é idêntica a questão de número 3.
+
+//7) Faça um Programa que leia três números e mostre o maior e o menor deles.
+
+num1=1*prompt("Digite um número: ")
+num2=1*prompt("Digite outro número")
+num3=1*prompt("Digite mais um:")
+
+alert("O maior número é: "+Math.max(num1, num2, num3))
+alert("O menor número é: "+Math.min(num1, num2, num3))
+
+
+/* 
+8) Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+   a) A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+   b) A mensagem "Reprovado", se a média for menor do que sete;
+   c) A mensagem "Aprovado com Distinção", se a média for igual a dez.
+   */
+
+p1 = parseFloat(1*prompt("Digite a 1° nota parcial"))
+p2 = parseFloat(1*prompt("Digite a 2° nota parcial"))
+
+if ((p1+p2)/2 == 10) {
+   alert("Sua média é "+((p1+p2)/2)+ ". Aprovado com Distinção.")
+} else if((p1+p2)/2 >= 7){
+   alert("Sua média é "+((p1+p2)/2)+". Aprovado.")
+} else{
+   alert("Sua média é "+((p1+p2)/2)+". Reprovado.")
+}
+
+</script>

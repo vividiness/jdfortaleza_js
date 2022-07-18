@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    //1 - alo mundo
+   alert("Alo mundo! ;D")
+
+   //2 mostrar número informado
+
+   numero=1*prompt("Digite um número") //
+    alert("O número informado foi: "+numero)
+
+    //3 dois números e mostrar soma
+
+    n1= prompt("Digite o primeiro numero da soma:")
+    n2 = prompt("Digite o segundo número:")
+
+    alert("A soma dos números digitados é: "+ (parseInt(n1)+parseInt(n2)))
+
+    
+    //4 - 4 notas bimestrais e média
+
+    s1=1*prompt("Digite a nota do 1° semestre")
+    s2=1*prompt("Digite a nota do 2° semestre")
+    s3=1*prompt("Digite a nota do 3° semestre")
+    s4=1*prompt("Digite a nota do 4° semestre")
+
+    media = (s1+s2+s3+s4)/4 
+
+    alert("Sua média: " + media)
+
+    
+    //5 - antecessor e sucessor 
+
+    n=1*prompt("Digite um número")
+
+    if (n !=0) {
+        alert('O antecessor é: ' + (n-1) + ' O sucessor é: ' + (n+1))
+    } else{
+        alert("Digite um número diferente de 0!")
+    }
+
+   //6 - qnt por hora e qnt horas por mês, calculo total salario mensal
+
+    vhora= parseFloat(prompt("Valor ganho por hora")) 
+    hmes= 1*prompt("Horas trabalhadas no mês")
+
+    alert("Ganho mensal: R$"+(vhora*hmes))
+
+   //7 - 
+   
+   mb=prompt("Tamanho do arquivo em Megabyte?")
+   vnet=(1*prompt("Velocidade da sua internet em Mega"))/8 
+
+
+   alert("O tempo estimado para download do arquivo são "+Math.round(((mb/vnet)/60))+" minutos ou " +(mb/vnet)+" segundos!")
+
+   //8 - programa que peça o nome e mostre 'boa noite, xxx'
+   nome=prompt('Seu nome é ... ?')
+   alert("Boa noite, " +nome +", até logo! ^-^")
+
+
+</script>
