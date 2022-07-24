@@ -1,0 +1,177 @@
+<script type="text/javascript">
+    
+    /*
+    const data = new Date(2001,11,12)
+
+    console.log(data.toLocateString ('pt-br', {weekday: 'long'}))
+
+    console.log(data.toLocateString('en-us', {weekday: 'long' }))
+    */
+    
+    /*
+    nome=prompt("digite seu nome") // o 'var' tá ocultado
+    alert("Bem vindo, "+ nome)
+
+   n1= prompt("numero 1")
+   n2 = prompt("numero 2")
+
+    alert("Soma: "+ (parseFloat(n1)+parseFloat(n2)))
+
+     console.log(typeof(parseFloat(prompt("oi"))))
+    */
+
+   
+
+    /*
+    Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média.
+  A atribuição de conceitos obedece à tabela abaixo:
+  Média de Aproveitamento  Conceito
+  Entre 9.0 e 10.0        A
+  Entre 7.5 e 9.0         B
+  Entre 6.0 e 7.5         C
+  Entre 4.0 e 6.0         D
+  Entre 4.0 e zero        E
+    O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C 
+    ou “REPROVA
+
+     | \
+
+     switch case break default também
+     operador ternário ?
+     etc
+     */
+
+     /*
+     
+     //19/07/2022
+    n1 = parseFloat(prompt("Digite a 1 nota parcial"))
+    n2 = parseFloat(prompt("Digite a 2 nota parcial"))
+    
+    if(n1 && n2 >=0 && n1 && n2 <=10.0 ){
+        media=(n1+n2)/2
+        if(media >= 9.0 && media<= 10.0){
+        alert("Suas notas: \n1 nota parcial: " +n1+ "\n2 nota parcial: "+n2+"\nMédia: "+media+"\nAPROVADO!")
+    }else if (media >= 7.5 && media <9.0){
+        alert("Suas notas: \n1 nota parcial: " +n1+ "\n2 nota parcial: "+n2+"\nMédia: "+media+"\nAPROVADO!")
+    }else if(media >= 6.0 && media <7.5){
+        alert("Suas notas: \n1 nota parcial: " +n1+ "\n2 nota parcial: "+n2+"\nMédia: "+media+"\nAPROVADO!")
+    }else if(media >= 4.0 && media <6.0){
+        alert("Suas notas: \n1 nota parcial: " +n1+ "\n2 nota parcial: "+n2+"\nMédia: "+media+"\nREPROVADO!")
+    }else{
+        alert("Suas notas: \n1 nota parcial: " +n1+ "\n2 nota parcial: "+n2+"\nMédia: "+media+"\nREPROVADO!")
+    }
+    } else{
+        document.write("Digite uma nota válida")
+    }
+    
+    */
+    //21/07/22
+
+    //NaN == Not a number
+
+    //types of data in javascript = undefined, null, boolean, string, symbol, bigint, number, object
+
+    //for in e for of ?
+    //typeof ?
+    //nodejs
+    //quando se cria variável com let, apenas por código pode ter 1 variável com o msm nome, diferentemente de var
+
+    /*
+    for (x=1; x<20; x+=2){ //x+=2 === x=x+2 
+        //variável; teste; ação -> vai repetir enquanto for verdade
+        alert(x)
+        
+    } //variável omitida
+    x=1
+    for(; x<10;x+=3 ){
+       alert(x) 
+    }
+
+
+    y=prompt("how many?")
+    for(x=1; x<=y; x+=1){
+        //alert(x)
+        document.write(x+"<br>")
+    }
+ 
+    //números impares entre 1 e 50
+    for(x=1; x<=50; x++){
+        if(x%2==1){
+            document.write(x+", ")
+        }
+    }
+
+*/
+
+//It's commomn for developers to useuppercase variable identifiers
+//for immutable values and lowercase or camelCase for mutable values (objects and arrays)
+
+/*
+----
+\'	single quote - pra aparecer a aspa simples
+\"	double quote - pra aparecer as aspas duplas
+\\	backslash - esse aparece uma barra do lado: ex("\\Oi == \Oi")
+\n	newline - quebra de linha
+\r	carriage return -retorna pra posição original do texto 
+\t	tab - dá um tab
+\b	word boundary
+\f	form feed
+
+
+nota=prompt("nota")
+//for: (; nota<0 || nota>=10; )
+while(nota<0 || nota>=10){
+    nota=prompt("nota invalida, digite novamente")
+}
+
+document.write("nota informada" +nota)
+
+*/
+
+
+
+//i=i+1 == i++ == i+=1 or -- ^^
+
+//valores que sao falsos : undefined, null, false, 0 e  ""
+
+//&& = ambas condições true
+// === comparação de valor e tipo
+
+
+var obj = { //objeto só dá pra buscar valor, pra leitura. (obj.nomedacaracterística)
+    "nome": "viviane",
+    "idade": 18
+};  
+
+obj.idade= 21
+console.log(obj)
+
+var arr = ["viviane", "guilherme", "bruno"] //busca no array é por índice
+
+console.log(arr[0])
+   
+arr.push("numsei")
+console.log(arr)
+
+console.log('viviane'['viviane'.length-1])
+
+//tamanho da string = acrescenta .length ex: 'viviane'.length
+
+// bracket notation (os colchetes []) is a way to get a character at a specific index within a string.
+//ex: 'viviane'[0] -> mostra V
+/*In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+let nome = 'Viviane';
+nome[0]= 'L'
+console.log(nome)
+tipo, isso aqui não dá pra mudar >:c, só alterando todo conteúdo da string
+
+//descobrir a última letra de uma palavra
+const sobrenome= 'gomes';
+console.log(sobrenome[sobrenome.length -1]) //acho que assim funciona pq to colocando ele pra array, e aí como array dá pra ler, mudar, talvez
+//seja assim que dê pra saber a última letra KKKKKK
+//da pra pegar outras letras, só colocar a posição, sendo que 1 é a ultima, 2 é a penultima, etc.
+ex: 'viviane['viviane.lenght-4']' -> vai mostrar a letra 'i' ;D
+*/
+
+</script>
