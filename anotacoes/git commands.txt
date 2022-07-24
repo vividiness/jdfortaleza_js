@@ -1,0 +1,148 @@
+git != github
+
+GIT é um software que controla versão (VCS) version control 
+"versionamento" de código -> manter atualizada a versão de algum código.
+
+github é uma "rede social" pra programador
+
+* git é o repositório local
+* github é o repositório remoto 
+
+
+
+*****conf pra conta
+
+git config --global user.email "meuemail@haha.com" -> pra adicionar o e-mail.
+
+git config --global user.name -> "meu nome" qnd se atualiza a versão, aquela atualização
+fica atrelada ao nome de quem atualizou, so, my name.
+
+-------------------------------------------------
+git init -> cria um arquivo .git na pasta, acredito que seja pra iniciar
+o git na pasta.
+
+git status -> mostra um relatório sobre o projeto, pasta, arquivos.
+*quais arquivos já foram incluídos e que não estão no controle de versão (git)
+* ou se arquivos foram atualizados.
+
+(commit é o versionamento na máquina, lembra disso)
+(no commits yet) -> sem versões no projeto.
+
+(untracked files) -> nenhum arquivo foi adicionado ao controle de versão 
+ele também aponta quais arquivos não estão no controle de versão
+
+git add "nomedoarquivo.js" ->(prepara o arquivo para o controle de versão)
+adiciona o arquivo para commit
+
+git add . -> adiciona todos os arquivos da pasta para preparar p/ commit
+ 
+-------------------------
+(agora sim a gnt faz commit)
+
+git commit -m "commit inicial"
+(m é de message) tbm o nome fica commit inicial, acredito que pra mudar o nome
+é alterar o texto aí.
+
+(aqui dá erro pq nao tem conta logada)
+
+(quaaando funciona)~~~
+
+ele mostra pra que 'branch' o git enviou a pasta;
+o nome da pasta;
+a quantidade de arquivos;
+e o nome dos arquivos;
+
+git remote add origin linkdogitprojeto -> define para onde o código
+será enviado
+
+(pra enviar de fato~~)
+git push
+
+(vai dar erro dnv por conta da branch, aí é só pôr pra branch master)
+
+
+(ver versões do código-'histórico')
+git reflog -> a versão mais atual é sempre a do topo
+
+(voltar para uma versão anterior)
+git reset --hard iddaversaoquevcquer
+
+branch, do inglês galho, significa os diferentes locais ou caminhos
+onde podemos colocar os versionamentos do código
+
+git branch -> mostra todas as branchs do git.
+(a branch com o nome verde e com * no cmd do git é a branch que tá sendo usada)
+
+(criar nova branch)
+git branch nomedabranch
+ex: staging (uma branch de testagem)
+
+(trocar de branch)
+git checkout nomedabranch
+
+~~então basicamente eu consigo alterar arquivos da master e adicionar eles
+alterado em outra branch
+
+
+antes de  utilizar o merge, verificar se estamos trabalhando com a versão
+mais atual do código, se ninguém nao atualizou antes.
+git pull -> traz as atualizações do server para a máquina
+
+(para colocar as atualizações da branch de teste para a principal)
+(seleciona a branch que vai receber as atualizações e utiliza o código:)
+git merge nomedabranch
+
+---------------------------------------------------
+na prática, ficaria nos seguintes passos:
+
+1. puxa as att pra branch principal: git pull
+2. gera uma branch pra teste a partir da branch principal: git branch nomedabranch
+3. trabalha e adiciona novas funcionalidades na branch de teste
+4. finaliza o trabalho na branch temporária
+5. troca pra branch princiapl: git checkout 
+6. atualizo denovo a branch principal: git pull 
+7. uno o código da branch temporária com principal (depois de testar): git merge nomedabranch
+8. coloco tudo da branch principal pro github com git push
+----------------------------------------------------------
+
+criar uma branch com base na outra:
+git checkout -b NomeDaBranchCriada NomeDaBranchUsadaComoBase
+
+
+(excluir um branch no local)
+git branch -d nomeDoBranchLocal
+
+(excluir um branch remoto)
+git push origin --delete nomeDoBranchRemoto
+
+(nao incluir certos arquivos ou pastas no git add)
+touch .gitignore (ele cria um arquivo .txt, nesse arquivo vc adiciona quais
+arquivos ou pastas vc quer que não seja adicionado ao controle de versão
+(adiciona o nome do arquivo ou pasta)
+ex:
+nomedapasta/
+nomedoarquivo.png
+
+
+(mkdir nomedapasta) -> cria uma pasta
+cd nomedapasta -> seleciona a pasta (cd siginfica change directory)
+touch nomedoarquivo.html -> cria um arquivo dentro de uma pasta selecionada
+> nomedoarquivo.extensao -> também cria um arquivo dentro de uma pasta selecionada
+
+-----------------------------------------------
+resumão
+
+git init  -> inicializa um novo repositório
+git add . -> adiciona os arquivos atuais ao próximo commmit
+git status -> verifica o status atual dos repositório git
+git commit -m "mensagem do commit" -> cria um novo commit com uma mensagem
+git push -> envia as atualizações para  anuvem na branch atualmente ativa
+git branch -> lista e mostra as branchs atuais
+git checkout nome-da-branch -> permite mudar para uma nova branch
+git checkout -b "nome da branch de origem" "nome da nova branch" -> cria uma branch com base em outra
+git merge "branch a receber merge" -> fazer merge da branch ativa com outra branch
+git pull -> atualiza a branch ativa
+
+
+
+
