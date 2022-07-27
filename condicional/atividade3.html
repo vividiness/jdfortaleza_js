@@ -1,48 +1,135 @@
 <script type="text/javascript">
     //19/07/2022
-    
+
     //1) Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão)
     
-    m=prompt(("Impar ou Par? \nDigite um número"))
+    m=prompt("Impar ou Par? \nDigite um número")
     
     while(m != Number(m)){
-        m=prompt(("Impar ou Par? \nDigita um número aí amigão ¯\\_(ツ)_/¯" ))
+        m=prompt("Impar ou Par? \nDigita um número aí amigão ¯\\_(ツ)_/¯" )
     }
     
-    switch(m%2){
-        case 0:
-            document.write("O número "+m+ " é par.")
-            break;
-           
-        case 1:
-            document.write("O número "+m+" é impar.")    
-            break;
-    
-            default:
-                document.write("? ¯\\_(ツ)_/¯")
+    if(m%2 == 0){
+        document.write("O número "+m+ " é par.")
+    }else{
+        document.write("O número "+m+" é impar.")    
     } 
-    
     
     
     //2) Faça um Programa que peça a hora e apresente uma mensagem de "Bom dia", "Boa tarde" ou "Boa noite" conforme a hora informada.
     
-    
+    var hora = prompt("Informe a hora no modelo: 00:00");
+    var horarray = hora.split(":"); //dividir a hora e o minuto
+         
+    horarray.map(Number); //converter array para tipo number: array.map(Number)
+
+    if(horarray[0] > 23 && horarray[1]>59){
+        var hora = prompt("Informe uma hora válida!");  
+    } else{
+        if(horarray[0] <= 11 && horarray[0] >=5){
+            document.write("Bom dia!")
+        } else if(horarray[0] >=12 && horarray[0]<=17){
+            document.write("Boa tarde!")
+        } else{
+            document.write("Boa noite!")
+        }
+    }
     
     //3) Faça um Programa que leia um número e exiba o dia correspondente da semana.
     //(1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
     
+    dia=prompt("Digite o dia da semana \n1 para domingo \n2 para segunda \netc..")
+
+    //verificação 
+    while(dia != Number(dia) && dia<=0 || dia>=8){
+        dia=prompt("Digite um dia válido aí amigão!")
+    } 
+    
+    switch(parseInt(dia)){
+        case 1:
+        document.write("O dia é Domingo!")
+            break;
+        
+        case 2:   
+        document.write("O dia é Segunda-feira!") 
+            break;
+
+        case 3:
+        document.write("O dia é Terça-feira!");
+            break;
+
+        case 4:
+        document.write("O dia é Quarta-feira!");
+            break;
+
+        case 5:
+        document.write("O dia é Quinta-feira!");
+            break;
+
+        case 6:
+        document.write("O dia é Sexta-feira!");
+            break;
+
+        case 7:
+        document.write("O dia é Sábado!");
+            break;
+
+        default:
+            document.write("Não encontrei o dia! Pode me ensinar da próxima vez? ^-^")
+        
+    }
+
+    
     
     /*
-    4) As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará
-    os reajustes. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+    4) As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa
+     que calculará os reajustes. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério,
+      baseado no salário atual:
        * salários até R$ 280,00 (incluindo) : aumento de 20%
        * salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
        * salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
-    salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
-    
+       * 
+    salários de R$ 1500,00 em diante : aumento de 5% 
+
+    Após o aumento ser realizado, informe na tela:
        - o salário antes do reajuste;
        - o percentual de aumento aplicado;
        - o valor do aumento;
        - o novo salário, após o aumento.
     */
+
+    salario = prompt("Digite o valor do seu salário em reais")
+
+    while(salario != Number(salario)){
+        salario = prompt("Digite um valor de salário válido")
+    }
+
+    var reajuste;
+    salario=Number(salario)
+
+    //20%
+    if(salario>0 && salario<=280){       
+        reajuste=salario+(salario*20)/100
+        
+        document.write("Seu antigo salário: R$"+salario+"<br>Percentual de aumento aplicado: 20%"+
+        "<br>Valor do aumento: R$"+((salario*20)/100)+"<br>Seu novo salário: R$"+reajuste);
+
+    //15%
+    }else if(salario>280 && salario<=700){
+        reajuste= salario+((salario*15)/100)
+        document.write("Seu antigo salário: R$"+salario+"<br>Percentual de aumento aplicado: 15%"+
+        "<br>Valor do aumento: R$"+((salario*15)/100)+"<br>Seu novo salário: R$"+reajuste)
+
+    //10%
+    }else if (salario <=1500 && salario >700){
+        reajuste= salario+((salario*10)/100)
+        document.write("Seu antigo salário: R$"+salario+"<br>Percentual de aumento aplicado: 10%"+
+        "<br>Valor do aumento: R$"+((salario*10)/100)+"<br>Seu novo salário: R$"+reajuste)
+
+    //5%
+    }else{
+        reajuste= salario+((salario*5)/100)
+        document.write("Seu antigo salário: R$"+salario+"<br>Percentual de aumento aplicado: 5%"+
+        "<br>Valor do aumento: R$"+((salario*5)/100)+"<br>Seu novo salário: R$"+reajuste)
+    }
     </script>
