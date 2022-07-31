@@ -1,6 +1,5 @@
 <script type="text/javascript">
 
-/*
 //1) Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.
 
 var numeros = [], posicao = 1;
@@ -18,28 +17,27 @@ for(i=0; i<=numeros.length; i++){
         document.write("<br>ímpar: "+numeros[i]);
     }
 } 
-*/
+
 
 //2) A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n−ésimo termo.
 
-alert("Série Fibonnaci :D")
+alert("Série Fibonacci :D")
 nmo = prompt("Digite um número para gerar a série")
 
 while(nmo != Number(nmo)){
     nmo = prompt("Digite um número válido para gerar a série...")
 }
 
-resultado = 0;
+numerosfibo = [];
+numerosfibo[0] = 0, numerosfibo[1] = 1;
 
-for(p=0; p<=nmo; p++){
-    resultado+=p;
-    document.write    
+for(p=2; p<=nmo; p++){
+   numerosfibo[p] = numerosfibo[p - 2] + numerosfibo[p -1];
 }
 
-document.write("<br>"+resultado)
+document.write("Série Fibonacci do número "+nmo+": <br>"+numerosfibo)
 
 
-/*
 //3) Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o
 //usuário informe um valor válido.
 
@@ -111,5 +109,5 @@ for(b=ft;b>=1; b--){
 }
 document.write(" = "+ftresul)
 
-*/
+
 </script>
