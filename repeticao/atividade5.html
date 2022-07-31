@@ -1,0 +1,115 @@
+<script type="text/javascript">
+
+/*
+//1) Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.
+
+var numeros = [], posicao = 1;
+alert("Digite 10 números inteiros.");
+for(x=0; x<=9;x++){ //esse x é a posição do array '-'
+    numeros[x]=prompt("Digite o "+posicao+ "° número.")
+    posicao++;
+}
+
+for(i=0; i<=numeros.length; i++){
+    
+    if(numeros[i]%2 == 0){
+        document.write("<br>par: "+numeros[i]); //
+    } else{
+        document.write("<br>ímpar: "+numeros[i]);
+    }
+} 
+*/
+
+//2) A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a série até o n−ésimo termo.
+
+alert("Série Fibonnaci :D")
+nmo = prompt("Digite um número para gerar a série")
+
+while(nmo != Number(nmo)){
+    nmo = prompt("Digite um número válido para gerar a série...")
+}
+
+resultado = 0;
+
+for(p=0; p<=nmo; p++){
+    resultado+=p;
+    document.write    
+}
+
+document.write("<br>"+resultado)
+
+
+/*
+//3) Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o
+//usuário informe um valor válido.
+
+n=prompt("Digite uma nota entre 0-10");
+
+while(n != Number(n)){
+    n=prompt("Digite um valor válido!");
+}
+
+n= Number(n);
+
+while(n<0 || n>10){
+    n=prompt("Digite um valor entre 0-10");
+}
+
+document.write("Sua nota: "+n)
+
+
+//4) Faça um programa que calcule o mostre a média aritmética de N notas.
+
+//quantidade de notas
+notas=prompt("Quantas notas deseja calcular?");
+
+while(notas != Number(notas)){
+    notas=prompt("Digite um valor válido!");
+}
+
+notas= Number(notas);
+todasnotas = [];
+var contador = 1;
+
+//pegando as N notas
+for(j=0; j<=notas-1; j++){ // ????
+    todasnotas[j] = prompt("Digite a "+contador+"° nota")
+    contador++;
+}
+
+//soma, média e resultado
+todasnotas = todasnotas.map(Number);
+var soma = 0;
+
+for(c=0; c < todasnotas.length; c++){
+    soma+=todasnotas[c];
+ }
+
+document.write("Suas notas: "+todasnotas+"<br>Média Final: "+Math.round(soma/notas))
+
+
+// 5) Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120.
+// A saída deve ser conforme o exemplo abaixo:
+// Fatorial de: 5
+//     5! =  5 . 4 . 3 . 2 . 1 = 120 
+
+ft=prompt("Digite um número para calcular o fatorial");
+
+while(ft != Number(ft)){
+    ft=prompt("Digite um valor válido!");
+}    
+
+ftresul = 1;
+
+for(k=1; k<=ft; k++){
+    ftresul*=k
+}
+  
+document.write("Fatorial de: "+ ft+"<br>"+ft+"! = ")
+for(b=ft;b>=1; b--){
+    document.write(b + " . ")
+}
+document.write(" = "+ftresul)
+
+*/
+</script>
