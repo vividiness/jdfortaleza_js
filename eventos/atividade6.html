@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JS</title>
+</head>
+<body>
+
+<h2> Descreva detalhadamente o funcionamento da caixa de diálogo e do evento.
+    <br>Crie uma situação problema onde a combinação de ambas é a solução.
+    <br>Apresente o código exemplo onde existe o uso de ambas.</h2> 
+
+<b> caixa de diálogo: </b>confirm (caixa com dois botões: ok e cancelar) 
+<br><b>evento:</b> onBlur (é executado quando um objeto perde foco, e.g. quando o usuário sai de uma caixa de diálogo sem digitar algo)
+ 
+<br>
+<br> possibilidade de código: cadastro -> usa onBlur() pra quando o usuário sair da caixa de diálogo sem digitar, e no final usar o confirm 
+para confirmar todas as respostas
+
+
+<br><input type="text" id="nome"> Informe seu nome
+<br><input type="number" id="idade"> Informe sua idade
+
+<!--
+<p>Click the button to see line-breaks in a confirm box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text = "Press a button!\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+    text = "You pressed OK!";
+  } else {
+    text = "You canceled!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+-->
+    
+</body>
+</html>
